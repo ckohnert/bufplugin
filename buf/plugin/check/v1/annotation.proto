@@ -58,4 +58,12 @@ message Annotation {
   //
   // Optional.
   string documentation_link = 5;
+  // An optional identifier that can help refine exactly how the rule was violated.
+  //
+  // Optional.
+  //
+  // Simple rules will probably not require this level of detail because it is obvious, but
+  // for more complex logic (such as checks involving external systems), it can be helpful to
+  // provide an identifier that narrows down why the rule failed.
+  string failure_code = 6;
 }
